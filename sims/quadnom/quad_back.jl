@@ -1,0 +1,5 @@
+surface([(-1.,0.,0.),(3.5,0.,0.), (3.5,0.0001,3.5),(-1.,0.0001,3.5)], fillcolor = [Gray(0.7),Gray(0.7)], fa=0.5)
+surface!([(-2.,0.,0.),(-4.5,0.,0.), (-4.5,0.0001,3.5),(-2.,0.0001,3.5)], fillcolor = [Gray(0.7),Gray(0.7)], fa=0.5)
+scatter!(traj[:,1], traj[:,2], traj[:,3], mc=:wheat, ms=40, msc=:wheat)
+plot3d!(traj[:,1], traj[:,2], traj[:,3], line=(1, :black, :dashdot))
+plot!(xlim=[-5,5], ylim=[-6,6], zlim=[0,3], colorbar = false, background_color = :white, camera = (40, 70))
